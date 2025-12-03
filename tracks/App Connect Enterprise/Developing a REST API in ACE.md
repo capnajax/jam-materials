@@ -34,15 +34,15 @@ The goal of this demo is to demonstrate how to design, deploy, and test a REST A
 
 ## Creating the REST API
 
- ${issue tdw We need to explain "the toolkit" and how to obtain it}
+ ${issue @tdw We need to explain "the toolkit" and how to obtain it}
 
 1. In the toolkit, click **New** → **Rest API**
 
-    ![](images/DR1.png)
+    ![Screenshot](images/DR1.png)
 
 2. Add a name and select Specification Swagger 2.0
 
-    ![](images/DR2.png)
+    ![Screenshot](images/DR2.png)
 
     The header will be created with the information:
 
@@ -51,48 +51,48 @@ The goal of this demo is to demonstrate how to design, deploy, and test a REST A
     - Description
     - Version
 
-    ![](images/DR3.png)
+    ![Screenshot](images/DR3.png)
 
 3. Add Resources
 
-    ![](images/DR4.png)
+    ![Screenshot](images/DR4.png)
 
 4. Select **GET** and **POST**
 
-    ![](images/DR5.png)
+    ![Screenshot](images/DR5.png)
 
     Two resources will be created
 
-    ![](images/DR5-1.png)
+    ![Screenshot](images/DR5-1.png)
 
 5. Add the Model Definitions, type `petsApi`
 
-    ![](images/DR6.png)
+    ![Screenshot](images/DR6.png)
 
 6. Click on the **petsApi** object and then on the add button to add
 
-    ![](images/DR7.png)
+    ![Screenshot](images/DR7.png)
 
 7. Add `ID` as **integer**, `Name` as **string** and `Specie` as **String**
 
-    ![](images/DR8.png)
+    ![Screenshot](images/DR8.png)
 
 8. Select the Schema Type for the resources created
 
-    ![](images/DR9.png)
-    ![](images/DR10.png)
+    ![Screenshot](images/DR9.png)
+    ![Screenshot](images/DR10.png)
 
 9. Add the Subflow for the GET Operation
 
-    ![](images/DR11.png)
+    ![Screenshot](images/DR11.png)
 
 10. Drag and drop the compute node
 
-    ![](images/DR12.png)
+    ![Screenshot](images/DR12.png)
 
 11. Double click the compute node
 
-    ![](images/DR12-1.png)
+    ![Screenshot](images/DR12-1.png)
 
 12. Add these lines to the compute node:
 
@@ -103,43 +103,43 @@ The goal of this demo is to demonstrate how to design, deploy, and test a REST A
     SET OutputRoot.JSON.Data.petsApi.Specie = 'Dog';
     ```
 
-    ![](images/DR13.png)
+    ![Screenshot](images/DR13.png)
 
     Close and save the file.
 
 13. Go back to the Pets API tab
 
-    ![](images/DR14.png)
+    ![Screenshot](images/DR14.png)
 
 14. Add the Subflow
 
-    ![](images/DR15.png)
+    ![Screenshot](images/DR15.png)
 
 15. Add the Compute node for the Post Operation
 
-    ![](images/DR16.png)
+    ![Screenshot](images/DR16.png)
 
 16. Double Click the compute node
 
-    ![](images/DR17.png)
+    ![Screenshot](images/DR17.png)
 
 17. Uncomment the `CALL CopyMessageHeaders`
 
-    ![](images/DR18.png)
+    ![Screenshot](images/DR18.png)
 
 ## Create Bar File
 
 1.  Right click on the REST API application > New > BAR file
 
-    ![](images/DR19.png)
+    ![Screenshot](images/DR19.png)
 
 2. Give a name
 
-    ![](images/DR20.png)
+    ![Screenshot](images/DR20.png)
 
 3. Select the deployable resources and click on the Build and Save Button
 
-    ![](images/DR21.png)
+    ![Screenshot](images/DR21.png)
 
     Location of the Bar file is:
 
@@ -150,36 +150,36 @@ The goal of this demo is to demonstrate how to design, deploy, and test a REST A
 
 1. From the Cloud Pak for Integration UI go into the Integration dashboard:
 
-    ![](images/DR22.png)
+    ![Screenshot](images/DR22.png)
 
 2. On the Menu go to Bar Files
 
-    ![](images/DR23.png)
+    ![Screenshot](images/DR23.png)
 
 3. Import the Barfile
 
-    ![](images/DR24.png)
+    ![Screenshot](images/DR24.png)
 
 4. Click on the drag and drop
 
-    ![](images/DR25.png)
+    ![Screenshot](images/DR25.png)
 
 
 5. Click on the continue button
 
-    ![](images/DR26.png)
+    ![Screenshot](images/DR26.png)
 
 6. Go to the configuration Menu
 
-    ![](images/DR27.png)
+    ![Screenshot](images/DR27.png)
 
 7. Create configuration
 
-    ![](images/DR28.png)
+    ![Screenshot](images/DR28.png)
 
 8.  Select Type server.config.yaml and give a name:
 
-    ![](images/DR29.png)
+    ![Screenshot](images/DR29.png)
 
     ```yaml
     Cors:
@@ -195,23 +195,23 @@ Create the Integration Runtime
 
 1. Go to Home
 
-    ![](images/DR30.png)
+    ![Screenshot](images/DR30.png)
 
 2. Click on Deploy integrations
 
-    ![](images/DR31.png)
+    ![Screenshot](images/DR31.png)
 
 3.  Select Quick start integration and next
 
-    ![](images/DR32.png)
+    ![Screenshot](images/DR32.png)
 
 4. Select the bar file and click next:
 
-    ![](images/DR33.png)
+    ![Screenshot](images/DR33.png)
 
 5. Select the configuration and click next
 
-    ![](images/DR34.png)
+    ![Screenshot](images/DR34.png)
 
 6.  Select next:
 
@@ -220,38 +220,38 @@ Create the Integration Runtime
     **License use**: CloudPakForIntegrationNonProductionFree
     **Create**.
 
-    ![](images/DR35.png)
+    ![Screenshot](images/DR35.png)
 
 ## Test the REST API
 
 1. Go into the Runtime created
 
-    ![](images/DR36.png)
+    ![Screenshot](images/DR36.png)
 
 2. Select the Rest API
 
-    ![](images/DR37.png)
+    ![Screenshot](images/DR37.png)
 
     You will see the REST API operations listed
 
-    ![](images/DR38.png)
+    ![Screenshot](images/DR38.png)
 
 3. Select the GET /petsAPI
 You also can copy the URL to test from third party tools like Postman
 
-    ![](images/DR39.png)
+    ![Screenshot](images/DR39.png)
 
 4. Click on **Try it** and then click **send**
 
-    ![](images/DR40.png)
+    ![Screenshot](images/DR40.png)
 
     You will receive the response as set in the compute node
 
-    ![](images/DR41.png)
+    ![Screenshot](images/DR41.png)
 
 5. Test the POST, click the `POST /petsAPI` and **Try It**
 
-    ![](images/DR42.png)
+    ![Screenshot](images/DR42.png)
 
 6. Enter the body and click send
 
@@ -263,10 +263,10 @@ You also can copy the URL to test from third party tools like Postman
     }
     ```
 
-    ![](images/DR43.png)
+    ![Screenshot](images/DR43.png)
 
     You will get the headers, as indicated from the compute node
 
-    ![](images/DR44.png)
+    ![Screenshot](images/DR44.png)
 
- ${comment needs a conclusion}
+ ${comment @tdw needs a conclusion}
