@@ -35,105 +35,131 @@ Before we can use API Connect we must publish an API to expose. We will deploy a
 
 4\. When you log in for the first time, you may see a **Welcome, let's get started** window.  Feel free to review the contents by click **Start the tour** or by click on the **X** to close the window.
 
-![Welcome dialog box with 'Start the tour' button and close X option](../images/CP91.png)
+![alt text][pic91]
 
 5\. Navigate to the **App Connect Dashboard**.
 
-![Platform Navigator homepage showing App Connect Dashboard tile in the integration capabilities section](../images/CP92.png)
+![alt text][pic92]
 
 6\. Click on the **Dashboard** icon in the left navigation.
 
-![App Connect interface with Dashboard icon highlighted in the left navigation menu](../images/CP93.png)
+![alt text][pic93]
 
 7\. If you would like to create this web service yourself, follow the instructions in the **Using a REST API to manage a set of records** tutorial (https://www.ibm.com/docs/en/app-connect/11.0.0?topic=enterprise-toolkit-tutorials-github).  Otherwise, you can download the **CustomerDatabaseV1.bar** file for the service [here](./resources/CustomerDatabaseV1.bar).
 
-8\. Click on **Create server**.
+8\. Click **Quick start integration** and click **Next**.
 
-![App Connect Dashboard with prominent 'Create server' button in the center](../images/CP94.png)
+![alt text][pic95]
 
-9\. Click **Quick start toolkit integration** and click **Next**.
+9\. Drag and drop the BAR file that you just downloaded or click to upload.  Click **Next**.
 
-![Server creation wizard showing 'Quick start toolkit integration' option selected with Next button](../images/CP95.png)
+![alt text][pic96]
 
-10\. Drag and drop the BAR file that you just downloaded or click to upload.  Click **Next**.
+10\. Click **Next**.
 
-![File upload interface with drag and drop area for BAR files and upload button](../images/CP96.png)
+![alt text][pic97]
 
-11\. Click **Next**.
+11\. Give the Integration Server a **Name** (e.g. <span style="color: red">username</span>-customerdb) and click **Create**.
 
-![Configuration screen in the server creation wizard with Next button](../images/CP97.png)
+![alt text][pic98]
 
-12\. Give the Integration Server a **Name** (e.g. <span style="color: red">username</span>-customerdb) and click **Create**.
+12\. This will take you back to the Servers Dashboard where you will see your new server. It will likely be showing Pending while it is starting up the pod.
 
-![Integration Server creation form with name field highlighted showing 'username-customerdb' format](../images/CP98.png)
+![alt text][pic99]
 
-13\. This will take you back to the Servers Dashboard where you will see your new server. It will likely be showing Pending while it is starting up the pod.
+13\. Note: It may take a couple of minutes to start up. You can refresh the page. Once it is up and running it will show the following:
 
-![Servers Dashboard showing newly created integration server with 'Pending' status](../images/CP99.png)
+![alt text][pic100]
 
-14\. Note: It may take a couple of minutes to start up. You can refresh the page. Once it is up and running it will show the following:
+14\.  Click on the newly created Integration Server.
 
-![Servers Dashboard showing integration server with 'Running' status and green checkmark](../images/CP100.png)
+![alt text][pic101]
 
-15\.  Click on the newly created Integration Server.
+15\. Click on the **CustomerDatabaseV1** API.
 
-![Integration Server tile in the dashboard with server name highlighted for clicking](../images/CP101.png)
+![alt text][pic102]
 
-16\. Click on the **CustomerDatabaseV1** API.
+16\. Confirm that the **Overview** tab is selected and click **Download OpenAPI Document**.
 
-![Integration Server details page showing CustomerDatabaseV1 API tile](../images/CP102.png)
+![alt text][pic103]
 
-17\. Confirm that the **Overview** tab is selected and click **Download OpenAPI Document**.
+[pic0]: ../images/0.png
+[pic1]: ../images/1.png
+[pic2]: ../images/2.png
+[pic3]: ../images/3.png
+[pic4]: ../images/4.png
+[pic5]: ../images/5.png
+[pic91]: ../images/91.png
+[pic92]: ../images/92.png
+[pic93]: ../images/93.png
+[pic94]: ../images/94.png
+[pic95]: ../images/95.png
+[pic96]: ../images/96.png
+[pic97]: ../images/97.png
+[pic98]: ../images/98.png
+[pic99]: ../images/99.png
+[pic100]: ../images/100.png
+[pic101]: ../images/101.png
+[pic102]: ../images/102.png
+[pic103]: ../images/103.png
 
-![API overview page with 'Download OpenAPI Document' button highlighted](../images/CP103.png)
+## 3. Import an API into API Connect <a name="import_api"></a>
 
-## 3a. Import an API into API Connect
+1\. Click on **IBM Cloud Pak** in the upper left.
 
-1\. Click on **IBM Automation** in the upper left.
-
-![Navigation breadcrumb showing 'IBM Automation' link in the upper left corner](../images/CP104.png)
+![alt text][pic104]
 
 2\. Navigate to the API Connect instance.
 
-![Platform Navigator showing API Connect instance tile in the integration capabilities](../images/CP6.png)
+![alt text][pic6]
 
 3\. Select API Manager User Registry.
 
-![API Connect login page with 'API Manager User Registry' option highlighted](./images/118.png)
+![API Connect login page with 'API Manager User Registry' option highlighted](../images/7.png)
 
 4\. Use the user name and password that you have created while creating the provider organization. Refer FAQs section 5)k).
 
-![API Manager login form with username and password fields for provider organization access](./images/119.png)
+![API Manager login form with username and password fields for provider organization access](../images/8.png)
 
 5\. When you log in for the first time, you may see a **Get started** window.  Feel free to review the contents and close the window.
 
 6\. Confirm that you are in the provider organization for your username (upper right) and then click on **Develop APIs and products**.
 
-![API Manager dashboard with provider organization name shown in upper right and 'Develop APIs and products' tile highlighted](../images/CP9.png)
+![alt text][pic9]
 
 7\. We are now able to begin to create APIs and Products.  Click **Add**.
 
-![API development workspace showing prominent 'Add' button for creating new APIs and products](../images/CP10.png)
+![alt text][pic10]
 
 8\. Click **API (from REST, GraphQL or SOAP)**.
 
-![Add menu dropdown showing 'API (from REST, GraphQL or SOAP)' option selected](../images/CP11.png)
+![alt text][pic11]
 
 9\. Click **Existing OpenAPI** under **Import** and click **Next**.
 
-![API creation wizard showing 'Existing OpenAPI' option under Import section with Next button](../images/CP12.png)
+![alt text][pic12]
 
-10\.  Select the **Customer_Database-1.0.0.yaml** file that was just downloaded and click **Next**.
+10\.  Select the **Customer_Database-1.0.0.yaml** file that was just downloaded and click **Next**.
 
-![File selection dialog showing Customer_Database-1.0.0.yaml file selected for upload](../images/CP13.png)
+![alt text][pic13]
 
-11\. Make sure that the **Activate API** <span style="color: red">is not</span> selected and click **Next**. 
+11\.  The API should be imported successfully as shown in the image below.  Click **Edit API**.
 
-![API import options showing 'Activate API' checkbox unchecked as required](../images/CP14.png)12\.  The API should be imported successfully as shown in the image below.  Click **Edit API**.
+![alt text][pic15]
 
-![API import success screen showing Customer Database API imported successfully with 'Edit API' button](../images/CP15.png)
+[pic6]: ../images/6.png
+[pic7]: ../images/7.png
+[pic8]: ../images/8.png
+[pic9]: ../images/9.png
+[pic10]: ../images/10.png
+[pic11]: ../images/11.png
+[pic12]: ../images/12.png
+[pic13]: ../images/13.png
+[pic14]: ../images/14.png
+[pic15]: ../images/15.png
+[pic104]: ../images/104.png
 
-## 3b. Configure the API
+## 4. Configure the API <a name="configure_api"></a>
 
 After importing the existing API, the first step is to configure basic security before exposing it to other developers. By creating a client key and secret security, we are able to identify the application using the API.
 
@@ -141,235 +167,272 @@ Next, we will define the backend endpoints where the API is actually running. IB
 
 Finally, we will configure the proxy call to invoke the endpoint.
 
-### i. Configure API Key Security
+### 4a. Configure API Key Security <a name="configure_security"></a>
 
-1\. Upon import, you will notice that an error has been detected.  Click on the **error**.
+1\. Click **Validate**, you will notice that an error has been detected.  Click on the **error**.
 
-![API editor interface showing an error indicator that needs to be clicked to view details](../images/CP16.png)
+![alt text][pic16]
 
-2\. The error indicates that **the openapi definition must contain the 'https' scheme.**.  After reviewing the error, click on the **X** to close the window.
+2\. The error indicates that **the OpenAPI definition must contain the 'https' or 'wss' scheme**.  After reviewing the error, click on the **X** to close the window.
 
-![Error dialog showing message about missing 'https' scheme in OpenAPI definition with X close button](../images/CP17.png)
+![alt text][pic17]
 
 3\. To resolve the error, make sure that the **Design** tab is selected and click on the **+** next to **Schemes List**.
 
-![API Design tab showing Schemes List section with + button highlighted for adding new schemes](../images/CP18.png)
+![alt text][pic18]
 
 4\. From the **Select an option** drop-down menu, select **https**.  Click **Create**.
 
-![Dropdown menu showing scheme options with 'https' selected for creation](../images/CP19.png)
+![alt text][pic19]
 
-![Schemes configuration interface showing https option being configured](../images/CP20.png)
-
-![Schemes configuration interface showing https option being configured](../images/CP20.png)
+![alt text][pic20]
 
 5\. Expand the **Schemes List** section.  Under the Schemes List, **http** and **https** are listed.  Click **Save**.
 
-![Expanded Schemes List showing both http and https schemes configured with Save button](../images/CP21.png)
+![alt text][pic21]
 
 Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.  You should no longer see the warning indicator.
 
-![Success notification dialog showing 'Your API has been updated' message with X close button](../images/CP22.png)
+![alt text][pic22]
 
 6\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
 
-![Design tab interface showing Security Schemes section with + button highlighted for adding new security scheme](../images/CP23.png)
+![alt text][pic23]
 
 7\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Id**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
 
-![Security definition form with X-IBM-Client-Id name and apiKey type selected](../images/CP24.png)
+![alt text][pic24]
 
-8\. For the **Name**, enter a name (e.g., **X-IBM-Client-Id**), select **client_id** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
+8\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Id**), select **client_id** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
 
-![Security definition configuration showing X-IBM-Client-Id name, client_id key type, and header location settings](../images/CP25.png)
+![alt text][pic25]
 
 9\. Click **Save**.
 
-![](../images/CP26.png)
+![alt text][pic26]
 
 10\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
-![Success notification showing 'Your API has been updated' message with X close button](../images/CP22.png)
+![alt text][pic22]
 
 11\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
 
-![Design tab showing Security Schemes section with + button for adding the second security scheme](../images/CP31.png)
+![alt text][pic31]
 
 12\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Secret**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
 
-![Security definition form configured for X-IBM-Client-Secret with apiKey type selected](../images/CP32.png)
+![alt text][pic32]
 
-13\. For the **Name**, enter a name (e.g., **X-IBM-Client-Secret**), select **client_secret** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
+13\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Secret**), select **client_secret** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
 
-![Security definition configuration for X-IBM-Client-Secret showing client_secret key type and header location settings](../images/CP33.png)
+![alt text][pic33]
 
 14\. Click **Save**.
 
-![API editor interface with Save button to persist the Client-Secret security scheme](../images/CP26.png)
+![alt text][pic26]
 
 15\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
-![Success notification dialog showing 'Your API has been updated' confirmation message](../images/CP22.png)
+![alt text][pic22]
 
 16\. Make sure that the **Design** tab is selected and click on the **+** next to **Security**.
 
-![Design tab showing Security section with + button highlighted for adding security requirements](../images/CP34.png)
+![alt text][pic34]
 
 17\. Select **"X-IBM-Client-Id"** and **"X-IBM-Client-Secret"** and click **Create**.
 
-![Security requirement dialog showing both X-IBM-Client-Id and X-IBM-Client-Secret selected for creation](../images/CP35.png)
+![alt text][pic35]
 
 18\. Click **Submit**.
 
-![Security configuration interface with Submit button to apply the security requirements](../images/CP37.png)
+![alt text][pic37]
 
 19\. Click **Save**.
 
-![API editor with Save button to persist all security configuration changes](../images/CP26.png)
+![alt text][pic26]
 
 20\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
-![Final success notification showing 'Your API has been updated' after security setup completion](../images/CP22.png)
+![alt text][pic22]
 
-### ii. Define a Target-URL for Sandbox Environment
+### 4b. Define a Target-URL for Sandbox Environment <a name="target_url"></a>
 
 1\. Make sure that the **Design** tab is selected and click on **Host**.
 
-![Design tab interface showing Host section highlighted for configuration](../images/CP38.png)
+![alt text][pic38]
 
 2\. Copy the value in the **Host (optional)** field.
 
-![Host configuration showing the host URL value that needs to be copied for later use](../images/CP39.png)
+![alt text][pic39]
 
-3\. Navigate to the **Gateway** tab.
+3\. Make sure that the **Gateway** tab is selected and expand **Properties**.  Click on **target-url**.
 
-![API editor interface showing Gateway tab highlighted in the navigation](../images/CP40.png)
+![alt text][pic41]
 
-4\. Make sure that the **Gateway** tab is selected and expand **Properties**.  Click on **target-url**.
+4\. Replace the **Property Value (optional)** with the value that you copied in Step 2.  **Note:**  Make sure to include a **http://** at the beginning and remove the **:** and **port number** (e.g. **:80**) from the end.
 
-![Gateway tab showing expanded Properties section with target-url property highlighted](../images/CP41.png)
+![alt text][pic42]
 
-5\. Replace the **Property Value (optional)** with the value that you copied in Step 2.  **Note:**  Make sure to include a **http://** at the beginning and remove the **:** and **port number** (e.g. **:80**) from the end if it exists.
+5\. Click **Update**.
 
-![Property configuration dialog for target-url showing value field being updated with copied host URL](../images/CP42.png)
+![alt text][pic43]
 
-6\. Click **Update**.
+6\. Click **Save**.
 
-![Property configuration dialog showing Update button to save the target-url changes](../images/CP43.png)
+![alt text][pic44]
 
-7\. Click **Save**.
+7\. Navigate to the **Design** tab.
 
-![Gateway tab interface with Save button to persist the target-url property configuration](../images/CP44.png)
+![alt text][pic45]
 
-8\. Navigate to the **Design** tab.
+8\. Click on **Host**.
 
-![API editor showing Design tab being selected to return to design configuration](../images/CP45.png)
+![alt text][pic46]
 
-9\. Click on **Host**.
+9\. Delete the value in the **Host (optional)** field.
 
-![Design tab interface with Host section selected for configuration](../images/CP46.png)
+![alt text][pic47]
 
-10\. Delete the value in the **Host (optional)** field.
+10\. Click **Save**.
 
-![Host configuration showing the host field being cleared of its previous value](../images/CP47.png)
+![alt text][pic26]
 
-14\. Click **Save**.
+11\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
-![API editor interface with Save button to persist the Client-Secret security scheme](../images/CP26.png)button to persist all security configuration changes](../images/CP26.png)
+![alt text][pic22]
 
-20\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
-
-![Final success notification showing 'Your API has been updated' after security setup completion](../images/CP22.png)
-
-### iii. Configure Proxy Call in Designer
+### 4c. Configure Proxy Call in Designer <a name="proxy"></a>
 
 1\. Navigate to the **Gateway** tab.
 
-![API editor with Gateway tab highlighted for configuring proxy policies](../images/CP48.png)
+![alt text][pic48]
 
 2\. Make sure the **Gateway** tab is selected and click on **Policies**.
 
-![Gateway tab interface showing Policies section highlighted for assembly configuration](../images/CP49.png)
+![alt text][pic49]
 
 3\. Click on the **Invoke** task in the assembly panel.
 
-![Gateway policies assembly showing Invoke task highlighted in the policy flow diagram](../images/CP50.png)
+![alt text][pic50]
 
 4\. Update the **URL** so that it reads **$(target-url)$(request.path)**.
 
-![Invoke policy configuration showing URL field being updated with target-url and request.path variables](../images/CP51.png)
+![alt text][pic51]
 
 5\. Click **Save**.
 
-![Gateway tab with Save button to persist the Invoke policy URL configuration](../images/CP52.png)
+![alt text][pic52]
 
 6\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
-![Success notification showing 'Your API has been updated' after proxy configuration completion](../images/CP53.png)
+![alt text][pic53]
 
-## 3c. Test the API
+[pic16]: ../images/16.png
+[pic17]: ../images/17.png
+[pic18]: ../images/18.png
+[pic19]: ../images/19.png
+[pic20]: ../images/20.png
+[pic21]: ../images/21.png
+[pic22]: ../images/22.png
+[pic23]: ../images/23.png
+[pic24]: ../images/24.png
+[pic25]: ../images/25.png
+[pic26]: ../images/26.png
+[pic27]: ../images/27.png
+[pic28]: ../images/28.png
+[pic29]: ../images/29.png
+[pic30]: ../images/30.png
+[pic31]: ../images/31.png
+[pic32]: ../images/32.png
+[pic33]: ../images/33.png
+[pic34]: ../images/34.png
+[pic35]: ../images/35.png
+[pic36]: ../images/36.png
+[pic37]: ../images/37.png
+[pic38]: ../images/38.png
+[pic39]: ../images/39.png
+[pic40]: ../images/40.png
+[pic41]: ../images/41.png
+[pic42]: ../images/42.png
+[pic43]: ../images/43.png
+[pic44]: ../images/44.png
+[pic45]: ../images/45.png
+[pic46]: ../images/46.png
+[pic47]: ../images/47.png
+[pic48]: ../images/48.png
+[pic49]: ../images/49.png
+[pic50]: ../images/50.png
+[pic51]: ../images/51.png
+[pic52]: ../images/52.png
+[pic53]: ../images/53.png
+
+## 5. Test the API <a name="test_api"></a>
 
 In the API Designer, you have the ability to test the API immediately after creation in the Assemble view!
 
-1\. Switch the toggle from Offline to Online. This step automatically publishes the API.
+1\. Click on the **Test** tab.
 
-![API editor interface showing toggle switch being changed from Offline to Online status](../images/CP54.png)
+![alt text][pic54]
 
-2\. You will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.  You should see that the API is now Online.
+2\. Click on the **Target Configuration within Test** tab.
 
-![API status confirmation showing the API is now Online with success notification dialog](../images/CP55.png)
+![alt text][pic105]
 
-3\. Click on the **Test** tab.
+3\. Switch the **AutoPublish toggle from Off to On**. This step automatically publishes the API.
 
-![API editor showing Test tab highlighted in the navigation for API testing](../images/CP56.png)
+![alt text][pic56]
 
-4\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers**.  Click **Send**.
+4\. You will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.  You should see that the API is now Online.
 
-![Test interface showing GET request to customerdb/v1/customers endpoint selected with Send button](../images/CP57.png)
+![alt text][pic55]
+
+5\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers**.  Click **Send**.
+
+![alt text][pic57]
 
 **Note:** If this is the first time testing the API after publishing it, you may get a **No response received** popup. Click **Here** and accept the certificate to see the 401 message.
 
-![Error dialog showing 'No response received' message with link to accept certificate](../images/CP58.png)
+![alt text][pic58]
 
 To add an exception in the Chrome browser, click in the whitespace of the page.
 
-![Chrome browser certificate error page with whitespace area for clicking to bypass security warning](../images/CP59.png)
+![alt text][pic59]
 
 Blindly type **thisisunsafe**.  This should direct you to a new page that states **401 - Unauthorized**.
 
-![Browser page showing '401 - Unauthorized' error message after certificate bypass](../images/CP60.png)
+![alt text][pic60]
 
 Navigate back to the **API Connect** browser window.
 
 To add an exception in the Firefox browser, click **Advanced** and click **Accept the Risk and Continue**.
 
-![Firefox security warning page with Advanced button highlighted for certificate exception](../images/CP61.png)
+![alt text][pic61]
 
-![Firefox advanced security options showing 'Accept the Risk and Continue' button](../images/CP62.png)
+![alt text][pic62]
 
 This will direct you to a new page that states **401 - Unauthorized**.
 
-![Firefox showing 401 - Unauthorized page after accepting certificate risk](../images/CP63.png)
+![alt text][pic63]
 
 Navigate back to the **API Connect** browser window.
 
-5\. Click **Send**.
+6\. Click **Send**.
 
-![Test interface with Send button highlighted for executing the GET request to retrieve customers](../images/CP57.png)
+![alt text][pic57]
 
-6\. The **Response** will show all of the customers in the database.
+7\. The **Response** will show all of the customers in the database.
 
-![Test response showing JSON array of customer records retrieved from the database](../images/CP64.png)
+![alt text][pic64]
 
-7\. Now let's add a record to the database.  Click **Clear**.
+8\. Now let's add a record to the database.  Click **Clear**.
 
-![Test interface with Clear button highlighted to reset the test form for new request](../images/CP65.png)
+![alt text][pic65]
 
-8\. For the **Request**, select the request that begins with **POST** and ends in **../customerdb/v1/customers**.  Click on the **Body** tab.
+9\. For the **Request**, select the request that begins with **POST** and ends in **../customerdb/v1/customers**.  Click on the **Body** tab.
 
- ![Test interface showing POST request selected with Body tab highlighted for JSON payload entry](../images/CP66.png)
+ ![alt text][pic66]
 
-9\. In the **Body** tab, enter some text in the following JSON format:<br\>
+10\. In the **Body** tab, enter some text in the following JSON format:<br\>
 ```
 {  
 "firstname" : "Emily",  
@@ -380,116 +443,168 @@ Navigate back to the **API Connect** browser window.
 
 Click **Send**.
 
-![Test Body tab showing JSON customer data entered for POST request with Send button](../images/CP67.png)
+![alt text][pic67]
 
-10\. Make note of the **ID** number in the response.  In the example below, the ID is 9.
+11\. Make note of the **ID** number in the response.  In the example below, the ID is 9.
 
-![Test response showing newly created customer record with ID number 9 highlighted](../images/CP68.png)
+![alt text][pic68]
 
-11\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
+12\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
 
-![Test interface showing GET by customerId request selected with Clear button for new test](../images/CP69.png)
+![alt text][pic69]
 
-12\. Click on the **Parameters** tab and enter the **ID** that you noted in step 10. Click **Send**.
+13\. Click on the **Parameters** tab and enter the **ID** that you noted in step 10. Click **Send**.
 
-![Test Parameters tab showing customer ID field populated with value 9 and Send button](../images/CP70.png)
+![alt text][pic70]
 
-13\. In the response, you will see the customer information that you entered in step 9.
+14\. In the response, you will see the customer information that you entered in step 9.
 
-![Test response showing individual customer record matching the ID parameter](../images/CP71.png)
+![alt text][pic71]
 
-14\. We can now update the customer information. For the **Request**, select the request that begins with **PUT** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
+15\. We can now update the customer information. For the **Request**, select the request that begins with **PUT** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
 
-![Test interface showing PUT request for customer update selected with Clear button](../images/CP72.png)
+![alt text][pic72]
 
-15\. Enter the **ID** that you noted in step 10 and click on the **Body** tab.
+16\. Enter the **ID** that you noted in step 10 and click on the **Body** tab.
 
-![PUT request setup showing customer ID parameter and Body tab for JSON payload entry](../images/CP73.png)
+![alt text][pic73]
 
-16\. In the **Body** tab, enter some text in the following JSON format:<br\>
+17\. In the **Body** tab, enter some text in the following JSON format:<br\>
 ```
 {
   "firstname": "Emily",
   "lastname": "Drew",
-  "address": "123 Colorado Address"
+  "address": "456 Colorado Address"
 }
 ```
 and click **Send**.
 
-![PUT request Body tab with updated JSON customer data and Send button highlighted](../images/CP74.png)
+![alt text][pic74]
 
-17\. The response should show that the customer ID was updated.
+18\. The response should show that the customer ID was updated.
 
-![PUT response confirming successful customer record update](../images/CP75.png)
+![alt text][pic75]
 
-18\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
+19\. For the **Request**, select the request that begins with **GET** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
 
-![Test interface selecting GET request by customer ID with Clear button for new test setup](../images/CP69.png)
+![alt text][pic69]
 
-19\. Make sure that the **Parameters** tab is selected and enter the **ID** that you noted in step 10. Click **Send**.
+20\. Make sure that the **Parameters** tab is selected and enter the **ID** that you noted in step 10. Click **Send**.
 
-![Parameters tab with customer ID populated for verification GET request with Send button](../images/CP70.png)
+![alt text][pic70]
 
-20\. In the response, you will see the customer information that you entered in step 16.
+21\. In the response, you will see the customer information that you entered in step 16.
 
-![GET response showing updated customer information confirming the PUT operation was successful](../images/CP76.png)
+![alt text][pic76]
 
-21\. You can also delete a customer from the customer database.  For the **Request**, select the request that begins with **DELETE** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
+22\. You can also delete a customer from the customer database.  For the **Request**, select the request that begins with **DELETE** and ends in **../customerdb/v1/customers/{customerId}** and click **Clear**.
 
-![Test interface showing DELETE request for customer removal selected with Clear button](../images/CP77.png)
+![alt text][pic77]
 
-22\. Make sure that the **Parameters** tab is selected and enter the **ID** that you noted in step 10 and enter **secr3t** for **Authorization**. Click **Send**.
+23\. Make sure that the **Parameters** tab is selected and enter the **ID** that you noted in step 10 and enter **secr3t** for **Authorization**. Click **Send**.
 
-![DELETE request Parameters tab showing customer ID and Authorization field with 'secr3t' value](../images/CP78.png)
+![alt text][pic78]
 
-23\. In the response, you will see the customer was deleted.
+24\. In the response, you will see the customer was deleted.
 
-![DELETE response confirming successful customer record deletion from the database](../images/CP79.png)
+![alt text][pic79]
 
-## 3d. Publish API
+[pic54]: ../images/54.png
+[pic55]: ../images/55.png
+[pic56]: ../images/56.png
+[pic57]: ../images/57.png
+[pic58]: ../images/58.png
+[pic59]: ../images/59.png
+[pic60]: ../images/60.png
+[pic61]: ../images/61.png
+[pic62]: ../images/62.png
+[pic63]: ../images/63.png
+[pic64]: ../images/64.png
+[pic65]: ../images/65.png
+[pic66]: ../images/66.png
+[pic67]: ../images/67.png
+[pic68]: ../images/68.png
+[pic69]: ../images/69.png
+[pic70]: ../images/70.png
+[pic71]: ../images/71.png
+[pic72]: ../images/72.png
+[pic73]: ../images/73.png
+[pic74]: ../images/74.png
+[pic75]: ../images/75.png
+[pic76]: ../images/76.png
+[pic77]: ../images/77.png
+[pic78]: ../images/78.png
+[pic79]: ../images/79.png
+[pic105]: ../images/105.png
+
+## 6. Publish API <a name="publish_api"></a>
 
 In this lab, we will make the API available to developers. In order to do so, the API must be first put into a product and then published to the Sandbox catalog. A product dictates rate limits and API throttling.
 
 When the product is published, the Invoke policy defined in the previous lab is written to the gateway. 
 
-### 6a. Create Customer Product and Add API
+### 6a. Create Customer Product and Add API <a name="customer_product"></a>
 
 1\. From the vertical navigation menu on the left, click **Develop**.
 
-![API Connect interface with Develop option highlighted in the left navigation menu](../images/CP80.png)
+![alt text][pic80]
 
 2\. Click the **Products** tab.
 
-![Develop workspace showing Products tab selected for creating API products](../images/CP82.png)
+![alt text][pic82]
 
 3\. Click **Add** and click **Product** from the drop-down menu.
 
-![Products workspace with Add button and Product option highlighted in dropdown menu](../images/CP83.png)
+![alt text][pic83]
 
-![Add menu dropdown showing Product option for creating new API product](../images/CP84.png)
+![alt text][pic84]
 
 4\. Click **New product** and click **Next**.
 
-![Product creation wizard showing 'New product' option selected with Next button](../images/CP85.png)
+![alt text][pic85]
 
 5\. Enter **Customer** for the **Title** and click **Next**.
 
-![Product creation form with 'Customer' entered as the title and Next button](../images/CP86.png)
+![alt text][pic86]
 
 6\. Select the **Customer Database** API and click **Next**.
 
-![API selection screen showing Customer Database API selected for inclusion in product](../images/CP87.png)
+![alt text][pic87]
 
 7\. Keep the **Default Plan** as is and click **Next**.
 
-![Plan configuration screen showing Default Plan settings maintained with Next button](../images/CP88.png)
+![alt text][pic88]
 
 8\. Select **Publish product** and confirm that **Visibility** is set to **Public** and **Subscribability** is set to **Authenticated**.  Click **Next**.
 
-![Publication settings showing Publish product selected with Public visibility and Authenticated subscribability options](../images/CP89.png)
+![alt text][pic89]
 
 9\.  The Product is now published successfully with the API base URL listed and available for developers from the Developer Portal.  Click **Done**.
 
-![Product publication success screen showing API base URL and confirmation that product is available in Developer Portal](../images/CP90.png)
+![alt text][pic90]
 
-### [Return to main APIC lab page](../api-connect/)
+[pic80]: ../images/80.png
+[pic81]: ../images/81.png
+[pic82]: ../images/82.png
+[pic83]: ../images/83.png
+[pic84]: ../images/84.png
+[pic85]: ../images/85.png
+[pic86]: ../images/86.png
+[pic87]: ../images/87.png
+[pic88]: ../images/88.png
+[pic89]: ../images/89.png
+[pic90]: ../images/90.png
+
+## 7.Summary <a name="summary"></a>
+
+Congratulations, you have completed the **Create and Secure an API** lab. Throughout the lab, you learned how to:
+
+-   Create an API by importing an OpenAPI definition for an existing REST service
+
+-   Configure ClientID/Secret Security, endpoints, and proxy to invoke endpoint
+
+-   Test a REST API in the Developer Toolkit
+
+-   Publish an API for developers
+
+### [Return to main APIC lab page](../../APIC-labs-new/Overview/)
