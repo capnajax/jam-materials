@@ -72,8 +72,10 @@ Taken from IBM DataPower Knowledge Centre - https://www.ibm.com/docs/en/datapowe
 
 1. The login link for the webui is provided on your list of user details.
 
+${issue @tdw dataPowerAdminUser and dataPowerAdminPassword is not populated}
+
     1. Enter `{{ dataPowerAdminUser | admin }}` in the `Username` field
-    1. Enter {{ dataPowerAdminPassword | password }} into  `Password` field
+    1. Enter `{{ dataPowerAdminPassword | password }}` into  `Password` field
     1. Select `default` in the `Domain` field
     1. Click `Log in` to log in to DataPower’s Web Console
 
