@@ -20,7 +20,7 @@ In this lab, you will explore the following key capabilities:
 
 - Reserve the lab environment. If you have not reserved the lab environment, then click [here](https://github.com/IBMIntegration/jam-in-a-box-2/blob/main/README.md)
 
-- Create a portal using the link provided. [Developer Portal](https://github.com/IBMIntegration/jam-materials/blob/main/tracks/API%20Connect/Portal%20Deployment.md#creating-a-catalog) 
+- Create a portal using the link provided. Please ensure that you only create a catalog. The registration of the Developer Portal service has already been completed through automation. [Developer Portal](https://github.com/IBMIntegration/jam-materials/blob/main/tracks/API%20Connect/Portal%20Deployment.md#creating-a-catalog) 
 
 - Go through the presentation to get the knowledge about API connect capabilities. Click [here](https://ibm.box.com/s/zdvlrkbmobejvkd5hzhiqf7jur4fc6sj)
 
@@ -32,17 +32,17 @@ A Developer Portal for the Sandbox catalog has already been configured in this e
 
 ### 2a. Login to the API Connect Developer Portal
 
-1\. In a browser, enter the URL for the Platform Navigator and use username(admin)/password that is provided to you.
+1\. In a browser, enter the URL for the Platform Navigator and use username(integration-admin)/password that is provided to you.
 
 2\. Navigate to the API Connect instance.
 
-![Platform Navigator showing API Connect instance tile highlighted for developer portal access](../images/PTL6.png)
+![Platform Navigator showing API Connect instance tile highlighted for developer portal access](../images/new06.png)
 
-3\. Select API Manager User Registry.
+3\. Select Cloud pak User Registry.
 
-![API Connect login page with 'API Manager User Registry' authentication option selected](./images/118.png)
+![API Connect login page with 'Cloud pak User Registry' authentication option selected](../images/new07.png)
 
-4\. Use the user name and password that you have created while creating the provider organization. Refer FAQs section 5)k).
+4\. Log in using the integration-admin user account.
 
 ![Provider organization login form with username and password fields for API Manager access](./images/119.png)
 
@@ -52,7 +52,7 @@ A Developer Portal for the Sandbox catalog has already been configured in this e
 
 6\. Click on **Click into your new catalog**.
 
-![Catalog management interface showing Sandbox catalog tile highlighted for selection](../images/PTL10.png)
+![Catalog management interface showing Sandbox catalog tile highlighted for selection](../images/new08.png)
 
 7\. Select the **Catalog settings** tab.
 
