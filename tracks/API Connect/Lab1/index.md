@@ -312,7 +312,7 @@ Once saved, you will see an indicator window appear that shows that **Your API h
 
 ![alt text][pic50]
 
-4\. Update the **URL** so that it reads **$(target-url)$(request.path)**.
+4\. Update the **URL** so that it reads **$(target-url)\$(request.path)**.
 
 ![alt text][pic51]
 

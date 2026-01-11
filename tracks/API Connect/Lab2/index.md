@@ -20,7 +20,7 @@ In this lab, you will explore the following key capabilities:
 
 - Reserve the lab environment. If you have not reserved the lab environment, then click [here](https://github.com/IBMIntegration/jam-in-a-box-2/blob/main/README.md)
 
-- Create a portal using the link provided. Please ensure that you only create a catalog. The registration of the Developer Portal service has already been completed through automation. [Developer Portal](https://github.com/IBMIntegration/jam-materials/blob/main/tracks/API%20Connect/Portal%20Deployment.md#creating-a-catalog) 
+- Create the portal using the sandbox catalog and the link provided below. As per the document, the portal should be created from a new catalog. Do not create a new catalog from the existing sandbox catalog. Follow the instructions in the document to complete the portal creation.. [ Portal creation](https://github.com/IBMIntegration/jam-materials/blob/main/tracks/API%20Connect/Portal%20Deployment.md#creating-a-catalog) 
 
 - Go through the presentation to get the knowledge about API connect capabilities. Click [here](https://ibm.box.com/s/zdvlrkbmobejvkd5hzhiqf7jur4fc6sj)
 
@@ -50,9 +50,9 @@ A Developer Portal for the Sandbox catalog has already been configured in this e
 
 ![API Manager interface showing 'Manage catalogs' option highlighted in the navigation menu](../images/PTL9.png)
 
-6\. Click on **Click into your new catalog**.
+6\. Click on **Sandbox**.
 
-![Catalog management interface showing Sandbox catalog tile highlighted for selection](../images/new08.png)
+![Catalog management interface showing Sandbox catalog tile highlighted for selection](../images/PTL10.png)
 
 7\. Select the **Catalog settings** tab.
 
