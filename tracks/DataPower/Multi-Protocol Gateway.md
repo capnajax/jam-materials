@@ -72,7 +72,7 @@ Taken from IBM DataPower Knowledge Centre - https://www.ibm.com/docs/en/datapowe
 
 1. The login link for the webui is provided on your list of user details.
 
-${issue @tdw dataPowerAdminUser and dataPowerAdminPassword is not populated}
+    ${issue @tdw dataPowerAdminUser and dataPowerAdminPassword is not populated}
 
     1. Enter `{{ dataPowerAdminUser | admin }}` in the `Username` field
     1. Enter `{{ dataPowerAdminPassword | password }}` into  `Password` field
@@ -320,7 +320,7 @@ The MPGW-Policy is the logic for the call. In this example we are going to set a
 
     1. Upload the file in [resources/gws.js](resources/gws.js).
     
-        1. Download the [linked file](resource/gws.js).
+        1. Download the [linked file](resources/gws.js).
         1. Click the upload icon
 
             ![Upload icon for uploading GatewayScript file](images/MP49.png)
@@ -392,7 +392,7 @@ The MPGW brings everything together. The listen is set to determine how it recei
 
     ![User Agent settings with both request and response traffic set to XML](images/MP62.png)
 
-    2. Toggle Propagate URI (B) to Off
+    2. Toggle Propagate URI to Off
 
     ![Propagate URI toggle switched to Off position](images/MP63.png)
 
