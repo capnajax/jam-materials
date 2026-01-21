@@ -140,25 +140,25 @@ You need keys and certificates to do create your TLS server profile. You may pro
 
     ![Save button highlighted after successful certificate generation](images/MP12-3.png)
 
-### Create a keystore
+### Create identification credentials
 
-The keystore, formerly known as "indentification credentials" encapsulates a key and certificate pair.
+The Indentification credentials, or idcreds, encapsulates a key and certificate pair.
 
-1. In the search field in the top left corner, search for `key` and click `Keystore (identification credentials)`
+1. In the search field in the top left corner, search for `ident` and click `Identification credentials`
 
-    ![Search results showing Keystore (identification credentials) option](images/MP13.png)
+    ![Search results showing Identification credentials option](images/MP13.png)
 
 1. Click `Add`
 
-    ![Add button on the keystore management page](images/MP14.png)
+    ![Add button on the Indentity credentials management page](images/MP14.png)
 
-1. Give your keystore a name like `mpgw-idcreds` and select the self-signed key and certificate objects you created in the previous section of this exercise. It's not necessary to select an intermediate certificate with self-signed credentials.
+1. Give your idcreds a name like `mpgw-idcreds` and select the self-signed key and certificate objects you created in the previous section of this exercise. It's not necessary to select an intermediate certificate with self-signed credentials.
 
-    ![Keystore configuration form with name 'mpgw-idcreds' and key/certificate selection](images/MP15.png)
+    ![Idcreds configuration form with name 'mpgw-idcreds' and key/certificate selection](images/MP15.png)
 
 1. Click `Apply` and `Save`
 
-    ![Apply and Save buttons on the keystore configuration page](images/MP16.png)
+    ![Apply and Save buttons on the idcreds configuration page](images/MP16.png)
 
 ### Create the TLS server profile
 
@@ -176,9 +176,9 @@ Now that we have a Keystore, let's create a TLS server profile
 
     ![TLS server profile name field with 'mpgw-lab-tls-server-profile' entered](images/MP19.png)
 
-1. Scroll down and select the Keystore object you createed in the previous section.
+1. Scroll down and select the Identification credentials object you created in the previous section.
 
-    ![Keystore selection dropdown showing the previously created keystore](images/MP20.png)
+    ![Idcreds selection dropdown showing the previously created idcreds](images/MP20.png)
 
 1. Click `Apply` and then `Save`
 
@@ -404,5 +404,3 @@ The MPGW brings everything together. The listen is set to determine how it recei
 
 In a browser window navigate to the test URL that was provided alongside your credentials.
 You should see a response similar to
-
-
