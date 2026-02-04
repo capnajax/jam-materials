@@ -70,12 +70,16 @@ Taken from IBM DataPower Knowledge Centre - https://www.ibm.com/docs/en/datapowe
 
 ## Login into the DataPower Web Console
 
+1. The DataPower Gateway server details are provided in the Jam-in-a-box navigator app. Click on the `DataPower Gateway` tile to open the DataPower Gateway Web Console. You may click on the Username and Password fields to copy them to your clipboard.
+
+    ![DataPower Gateway tile in Jam-in-a-box navigator app](images/MP3-1.png)
+
 1. The login link for the webui is provided on your list of user details.
 
-${issue @tdw dataPowerAdminUser and dataPowerAdminPassword is not populated}
+    ${issue @tdw dataPowerAdminUser and dataPowerAdminPassword is not populated}
 
-    1. Enter `{{ dataPowerAdminUser | admin }}` in the `Username` field
-    1. Enter `{{ dataPowerAdminPassword | password }}` into  `Password` field
+    1. Enter `admin` in the `Username` field
+    1. Enter your admin password{{#if secrets.[apim-demo-gw-admin].data.password }}, `{{{secrets.[apim-demo-gw-admin].data.password}}}`, {{/if}} into  `Password` field
     1. Select `default` in the `Domain` field
     1. Click `Log in` to log in to DataPower’s Web Console
 
@@ -140,25 +144,25 @@ You need keys and certificates to do create your TLS server profile. You may pro
 
     ![Save button highlighted after successful certificate generation](images/MP12-3.png)
 
-### Create a keystore
+### Create identification credentials
 
-The keystore, formerly known as "indentification credentials" encapsulates a key and certificate pair.
+The Indentification credentials, or idcreds, encapsulates a key and certificate pair.
 
-1. In the search field in the top left corner, search for `key` and click `Keystore (identification credentials)`
+1. In the search field in the top left corner, search for `ident` and click `Identification credentials`
 
-    ![Search results showing Keystore (identification credentials) option](images/MP13.png)
+    ![Search results showing Identification credentials option](images/MP13.png)
 
 1. Click `Add`
 
-    ![Add button on the keystore management page](images/MP14.png)
+    ![Add button on the Indentity credentials management page](images/MP14.png)
 
-1. Give your keystore a name like `mpgw-idcreds` and select the self-signed key and certificate objects you created in the previous section of this exercise. It's not necessary to select an intermediate certificate with self-signed credentials.
+1. Give your idcreds a name like `mpgw-idcreds` and select the self-signed key and certificate objects you created in the previous section of this exercise. It's not necessary to select an intermediate certificate with self-signed credentials.
 
-    ![Keystore configuration form with name 'mpgw-idcreds' and key/certificate selection](images/MP15.png)
+    ![Idcreds configuration form with name 'mpgw-idcreds' and key/certificate selection](images/MP15.png)
 
 1. Click `Apply` and `Save`
 
-    ![Apply and Save buttons on the keystore configuration page](images/MP16.png)
+    ![Apply and Save buttons on the idcreds configuration page](images/MP16.png)
 
 ### Create the TLS server profile
 
@@ -176,9 +180,9 @@ Now that we have a Keystore, let's create a TLS server profile
 
     ![TLS server profile name field with 'mpgw-lab-tls-server-profile' entered](images/MP19.png)
 
-1. Scroll down and select the Keystore object you createed in the previous section.
+1. Scroll down and select the Identification credentials object you created in the previous section.
 
-    ![Keystore selection dropdown showing the previously created keystore](images/MP20.png)
+    ![Idcreds selection dropdown showing the previously created idcreds](images/MP20.png)
 
 1. Click `Apply` and then `Save`
 
@@ -320,7 +324,7 @@ The MPGW-Policy is the logic for the call. In this example we are going to set a
 
     1. Upload the file in [resources/gws.js](resources/gws.js).
     
-        1. Download the [linked file](resource/gws.js).
+        1. Download the [linked file](resources/gws.js).
         1. Click the upload icon
 
             ![Upload icon for uploading GatewayScript file](images/MP49.png)
@@ -392,7 +396,7 @@ The MPGW brings everything together. The listen is set to determine how it recei
 
     ![User Agent settings with both request and response traffic set to XML](images/MP62.png)
 
-    2. Toggle Propagate URI (B) to Off
+    2. Toggle Propagate URI to Off
 
     ![Propagate URI toggle switched to Off position](images/MP63.png)
 
@@ -402,7 +406,34 @@ The MPGW brings everything together. The listen is set to determine how it recei
 
 ## Testing
 
-In a browser window navigate to the test URL that was provided alongside your credentials.
-You should see a response similar to
+1. Return to the Jam-in-a-box navigator app, and using the REST Client, send a request to the gateway URL you created earlier:
+    1. Select the `DataPower MPGW Lab Endpoint` host,
+        - note that when you choose this host, the external hostname and port are shown below so you can test this with cURL or wget if you prefer.
+        - Earlier we set the HTTP Handler port to 10443, but this endpoint is exposed by an OpenShift route on port 443.
+    1. Chose the HTTP `GET` method,
+    1. Enter `/` as the path.
 
+    No Authorization Token or other headers are required for this lab.
 
+    Click `Send`.
+
+    ![REST Client in Jam-in-a-box navigator app with gateway URL](images/MP65.png)
+
+1. The results are shown below the Send button. Your response should say `{"status":"ok"}`. Don't worry about the `x-backside-transport: FAIL FAIL`; it is the result of the backend not being configured in this lab.
+
+    ![REST Client test results displayed in Jam-in-a-box navigator app](images/MP66.png)
+
+## Summary
+
+In this lab we create a Multi-Protocol Gateway and demonstrated it in operation. Do do so, we performed these basic steps:
+
+1. Created an Identity Credentials object with a self-signed ECDSA key and certificate,
+1. Used the Idenntity Credentials object to create a TLS Server Profile object,
+1. Built an HTTPS Front Side Handler object, secured using the TLS Server Profile object,
+1. Built a Multi-Protocol Gateway Policy chain to shape the request and build a response
+1. Put the Front Side Handler and the Policy Chain together in a Multi-Protocol Gateway object, and
+1. Demonstrated the Gateway in operation.
+
+The gateway we created handled HTTPS requests and used a simple policy chain to build a response. We only scratched the surface of what it can do. The MPGW can front 15 different protocols and and has dozens of different policies that can be chained together to build complex logic.
+
+For more information about what it can do, check the _Multi-protocol gateway_ section of the [IBM Documentation for DataPower](https://www.ibm.com/docs/en/datapower-gateway/10.6.0?topic=development-multi-protocol-gateway).
