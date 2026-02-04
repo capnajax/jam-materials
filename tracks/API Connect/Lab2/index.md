@@ -18,9 +18,9 @@ In this lab, you will explore the following key capabilities:
 
 ## Prerequisites
 
-- Reserve the lab environment. If you have not reserved the lab environment, then click [here](https://techzone.ibm.com/collection/jam-in-a-box-for-integration-automation-cp4i/environments)
+- Reserve the lab environment. If you have not reserved the lab environment, then click [here](https://github.com/IBMIntegration/jam-in-a-box-2/blob/main/README.md)
 
-- Create Provider Organization and Configure Developer portal. Go through [FAQs](https://ibmintegration.github.io/jam-in-a-box/faq)
+- Create the portal using the sandbox catalog and the link provided below. As per the document, the portal should be created from a new catalog. Do not create a new catalog from the existing sandbox catalog. Follow the instructions in the document to complete the portal creation.. [ Portal creation](https://github.com/IBMIntegration/jam-materials/blob/main/tracks/API%20Connect/Portal%20Deployment.md#creating-a-catalog) 
 
 - Go through the presentation to get the knowledge about API connect capabilities. Click [here](https://ibm.box.com/s/zdvlrkbmobejvkd5hzhiqf7jur4fc6sj)
 
@@ -32,17 +32,17 @@ A Developer Portal for the Sandbox catalog has already been configured in this e
 
 ### Login to the API Connect Developer Portal
 
-1. In a browser, enter the URL for the Platform Navigator and use username(admin)/password that is provided to you.
+1\. In a browser, enter the URL for the Platform Navigator and use username(integration-admin)/password that is provided to you.
 
 1. Navigate to the API Connect instance.
 
-    ![Platform Navigator showing API Connect instance tile highlighted for developer portal access](../images/PTL6.png)
+![Platform Navigator showing API Connect instance tile highlighted for developer portal access](../images/new06.png)
 
-1. Select API Manager User Registry.
+3\. Select Cloud pak User Registry.
 
-    ![API Connect login page with 'API Manager User Registry' authentication option selected](./images/118.png)
+![API Connect login page with 'Cloud pak User Registry' authentication option selected](../images/new07.png)
 
-1. Use the user name and password that you have created while creating the provider organization. Refer FAQs section 5)k).
+4\. Log in using the integration-admin user account.
 
     ![Provider organization login form with username and password fields for API Manager access](./images/119.png)
 

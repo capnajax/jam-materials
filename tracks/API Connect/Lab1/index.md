@@ -16,9 +16,8 @@ In this lab you will learned how to:
 
 ## 2. Prerequisites
 
-- Reserve the lab environment. If you have not reserved the lab environment yet, then click [[here](https://techzone.ibm.com/collection/jam-in-a-box-for-integration-automation-cp4i/environments)]
+- Reserve the lab environment. If you have not reserved the lab environment yet, then click [[here](https://techzone.ibm.com/collection/674eb0d582e9ed71ce38688b)]
 
-- Create **Provider Organization** and Configure **Developer portal**. Go through [FAQs](https://ibmintegration.github.io/jam-in-a-box/faq)
 
 - Go through the presentation to get the knowledge about API connect capabilities. Cleck [here](https://ibm.box.com/s/zdvlrkbmobejvkd5hzhiqf7jur4fc6sj)
 
@@ -27,9 +26,13 @@ In this lab you will learned how to:
 
 Before we can use API Connect we must publish an API to expose. We will deploy a Customer Database REST service and then we will download the OpenAPI file for the the Customer Database REST service that we deployed.
 
-1\. In a browser, enter the URL for the Platform Navigator. Go to [FAQs](https://ibmintegration.github.io/jam-in-a-box/faq#TZ-ocp-console) to learn, how to access your enviroment.
+Note: You can obtain all the URLs and credentials from the Jam-in-Box page provided in the prerequisites.
 
-2\. When prompted, use the username(admin) and password provided to you for this lab.
+1\. In a browser, enter the URL for the Platform Navigator. You can get the details from the pre-request steps 
+
+2\. When prompted, use the username(integration-admin) and password provided to you for this lab.
+
+3\. Upon logging in, for first time you might be prompted to change your password. Kindly update your password and make a note of it for future reference.
 
 ![Platform Navigator login page with username and password fields](./images/105.png)
 
@@ -45,7 +48,7 @@ Before we can use API Connect we must publish an API to expose. We will deploy a
 
 ![alt text][pic93]
 
-7\. If you would like to create this web service yourself, follow the instructions in the **Using a REST API to manage a set of records** tutorial (https://www.ibm.com/docs/en/app-connect/11.0.0?topic=enterprise-toolkit-tutorials-github).  Otherwise, you can download the **CustomerDatabaseV1.bar** file for the service [here](./resources/CustomerDatabaseV1.bar).
+7\. If you would like to create this web service yourself, follow the instructions in the **Using a REST API to manage a set of records** tutorial (https://www.ibm.com/docs/en/app-connect/11.0.0?topic=enterprise-toolkit-tutorials-github).  Otherwise, you can download the **CustomerDatabaseV1.bar** file for the service [here](../resources/CustomerDatabaseV1.bar).
 
 8\. Click **Quick start integration** and click **Next**.
 
@@ -89,8 +92,8 @@ Before we can use API Connect we must publish an API to expose. We will deploy a
 [pic3]: ../images/3.png
 [pic4]: ../images/4.png
 [pic5]: ../images/5.png
-[pic91]: ../images/91.png
-[pic92]: ../images/92.png
+[pic91]: ../images/new01.png
+[pic92]: ../images/new02.png
 [pic93]: ../images/93.png
 [pic94]: ../images/94.png
 [pic95]: ../images/95.png
@@ -113,13 +116,13 @@ Before we can use API Connect we must publish an API to expose. We will deploy a
 
 ![alt text][pic6]
 
-3\. Select API Manager User Registry.
+3\. Select Cloud pak  User Registry.
 
-![API Connect login page with 'API Manager User Registry' option highlighted](../images/7.png)
+![API Connect login page with 'API Manager User Registry' option highlighted](../images/new04.png)
 
 4\. Use the user name and password that you have created while creating the provider organization. Refer FAQs section 5)k).
 
-![API Manager login form with username and password fields for provider organization access](../images/8.png)
+![API Manager login form with username and password fields for provider organization access](../images/new05.png)
 
 5\. When you log in for the first time, you may see a **Get started** window.  Feel free to review the contents and close the window.
 
@@ -147,7 +150,7 @@ Before we can use API Connect we must publish an API to expose. We will deploy a
 
 ![alt text][pic15]
 
-[pic6]: ../images/6.png
+[pic6]: ../images/new03.png
 [pic7]: ../images/7.png
 [pic8]: ../images/8.png
 [pic9]: ../images/9.png
@@ -169,25 +172,19 @@ Finally, we will configure the proxy call to invoke the endpoint.
 
 ### 4a. Configure API Key Security <a name="configure_security"></a>
 
-1\. Click **Validate**, you will notice that an error has been detected.  Click on the **error**.
 
-![alt text][pic16]
 
-2\. The error indicates that **the OpenAPI definition must contain the 'https' or 'wss' scheme**.  After reviewing the error, click on the **X** to close the window.
-
-![alt text][pic17]
-
-3\. To resolve the error, make sure that the **Design** tab is selected and click on the **+** next to **Schemes List**.
+1\. Add https to the Schemes list., make sure that the **Design** tab is selected and click on the **+** next to **Schemes List**.
 
 ![alt text][pic18]
 
-4\. From the **Select an option** drop-down menu, select **https**.  Click **Create**.
+2\. From the **Select an option** drop-down menu, select **https**.  Click **Create**.
 
 ![alt text][pic19]
 
 ![alt text][pic20]
 
-5\. Expand the **Schemes List** section.  Under the Schemes List, **http** and **https** are listed.  Click **Save**.
+3\. Expand the **Schemes List** section.  Under the Schemes List, **http** and **https** are listed.  Click **Save**.
 
 ![alt text][pic21]
 
@@ -195,63 +192,63 @@ Once saved, you will see an indicator window appear that shows that **Your API h
 
 ![alt text][pic22]
 
-6\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
+4\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
 
 ![alt text][pic23]
 
-7\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Id**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
+5\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Id**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
 
 ![alt text][pic24]
 
-8\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Id**), select **client_id** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
+6\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Id**), select **client_id** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
 
 ![alt text][pic25]
 
-9\. Click **Save**.
+7\. Click **Save**.
 
 ![alt text][pic26]
 
-10\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
+8\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
 ![alt text][pic22]
 
-11\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
+9\. Make sure that the **Design** tab is selected and click on the **+** next to **Security Schemes**.
 
 ![alt text][pic31]
 
-12\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Secret**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
+10\. For the **Security Definition Name (Key)**, enter a name (e.g., **X-IBM-Client-Secret**) and select **apiKey** in the drop-down menu for **Security Definition Type**.
 
 ![alt text][pic32]
 
-13\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Secret**), select **client_secret** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
+11\. For the **Variable name**, enter a name (e.g., **X-IBM-Client-Secret**), select **client_secret** from the drop-down menu for **Key Type (optional)**, and select **header** from the drop-down menu for **Located In**.  Click **Create**.
 
 ![alt text][pic33]
 
-14\. Click **Save**.
+12\. Click **Save**.
 
 ![alt text][pic26]
 
-15\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
+13\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
 ![alt text][pic22]
 
-16\. Make sure that the **Design** tab is selected and click on the **+** next to **Security**.
+14\. Make sure that the **Design** tab is selected and click on the **+** next to **Security**.
 
 ![alt text][pic34]
 
-17\. Select **"X-IBM-Client-Id"** and **"X-IBM-Client-Secret"** and click **Create**.
+15\. Select **"X-IBM-Client-Id"** and **"X-IBM-Client-Secret"** and click **Create**.
 
 ![alt text][pic35]
 
-18\. Click **Submit**.
+16\. Click **Submit**.
 
 ![alt text][pic37]
 
-19\. Click **Save**.
+17\. Click **Save**.
 
 ![alt text][pic26]
 
-20\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
+18\. Once saved, you will see an indicator window appear that shows that **Your API has been updated**.  Click on the **X** to close the window.
 
 ![alt text][pic22]
 
@@ -315,7 +312,7 @@ Once saved, you will see an indicator window appear that shows that **Your API h
 
 ![alt text][pic50]
 
-4\. Update the **URL** so that it reads **$(target-url)$(request.path)**.
+4\. Update the **URL** so that it reads \$(target-url)\$(request.path)
 
 ![alt text][pic51]
 
